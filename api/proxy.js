@@ -1,4 +1,3 @@
-const https = require('https');
 const http = require('http');
 
 export default function handler(req, res) {
@@ -7,11 +6,11 @@ export default function handler(req, res) {
     return res.status(400).json({ error: 'URL não fornecida' });
   }
 
-  // Verifica se o link m3u8 é HTTP e reencaminha
+  // Faz uma requisição HTTP para o link m3u8
   if (url.startsWith('http://')) {
     const request = http.get(url, (response) => {
       res.setHeader('Content-Type', response.headers['content-type']);
-      response.pipe(res);
+      response.pipe(res);  // Envia a resposta do servidor de volta ao cliente
     });
     
     request.on('error', (err) => {
