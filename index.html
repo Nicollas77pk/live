@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodução de Vídeo HLS</title>
+    <!-- Carregar a biblioteca hls.js -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+    <h1>Reproduzir Vídeo HLS (m3u8)</h1>
+
+    <!-- Elemento de vídeo onde o fluxo será carregado -->
+    <video id="video" width="100%" controls>
+        Seu navegador não suporta vídeo.
+    </video>
+
+    <script>
+        var video = document.getElementById('video');
+
+        // Verifica se o hls.js é compatível com o navegador
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+
+            // Carregar o arquivo m3u8
+            hls.loadSource('https://seusite.com/video.m3u8');  // Substitua pelo seu link m3u8
+
+            // Anexa o HLS ao player de vídeo
+            hls.attachMedia(video);
+
+            // Inicia a reprodução quando o manifesto for lido
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        }
+        // Se o navegador tem suporte nativo a HLS (Safari, por exemplo)
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'https://seusite.com/video.m3u8';  // Substitua pelo seu link m3u8
+            video.addEventListener('loadedmetadata', function() {
+                video.play();
+            });
+        }
+    </script>
+
+</body>
+</html>
