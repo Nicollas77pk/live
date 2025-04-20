@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -68,6 +67,12 @@
                 height: 300px;
             }
         }
+
+        @media (max-width: 480px) {
+            .video-container video {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -81,7 +86,7 @@
 
         <!-- Player de Vídeo -->
         <div class="video-container active" id="video-container">
-            <video id="player" controls>
+            <video id="player" controls aria-label="Player de vídeo ao vivo">
                 <source id="video-source" src="/api/proxy?url=http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8" type="application/x-mpegURL">
                 Seu navegador não suporta a tag de vídeo.
             </video>
@@ -95,9 +100,9 @@
         <!-- Botões de Transmissão -->
         <div class="options_iframe">
             <a href="javascript:void(0)" onclick="changePlayerUrl('https://onplaytv.net/globorj/video.m3u8', 'application/x-mpegURL')">Transmissão 1</a>
-            <a href="javascript:void(0)" onclick="changePlayerUrl(' https://cdnlv.online/globorj-globorio/index.m3u8', 'application/x-mpegURL')">Transmissão 2</a>
-          <a href="javascript:void(0)" onclick="useIframe('https://playertv.net/e/?v=nossoFutebol')">transmissão 3</a>
-          <a href="javascript:void(0)" onclick="useIframe('https://embedcanaistv.com/globorj/')">transmissão 4</a>
+            <a href="javascript:void(0)" onclick="changePlayerUrl('https://cdnlv.online/globorj-globorio/index.m3u8', 'application/x-mpegURL')">Transmissão 2</a>
+            <a href="javascript:void(0)" onclick="useIframe('https://playertv.net/e/?v=nossoFutebol')">Transmissão 3</a>
+            <a href="javascript:void(0)" onclick="useIframe('https://embedcanaistv.com/globorj/')">Transmissão 4</a>
         </div>
     </div>
 
@@ -138,6 +143,11 @@
                     hls = new Hls();
                     hls.loadSource(url);
                     hls.attachMedia(video);
+
+                    hls.on(Hls.Events.ERROR, function(event, data) {
+                        console.error('Erro ao carregar HLS:', data);
+                        alert('Falha ao carregar o vídeo. Tente novamente mais tarde.');
+                    });
                 } else {
                     video.load();
                 }
@@ -167,4 +177,3 @@
     </script>
 </body>     
 </html>
-
