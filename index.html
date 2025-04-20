@@ -1,4 +1,170 @@
-<video id="player" controls aria-label="Player de vídeo ao vivo">
-    <source id="video-source" src="/api/proxy?url=http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8" type="application/x-mpegURL">
-    Seu navegador não suporta a tag de vídeo.
-</video>
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol ao vivo grátis</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+    <style>
+        .player-container {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            border: 5px solid green;
+            padding: 10px;
+            border-radius: 10px;
+            background: #000;
+            text-align: center;
+        }
+
+        .icon-link img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .video-container, .iframe-container {
+            display: none;
+            width: 100%;
+        }
+
+        .video-container.active, .iframe-container.active {
+            display: block;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .options_iframe {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .options_iframe a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .options_iframe a:hover {
+            background-color: darkgreen;
+        }
+
+        @media (max-width: 768px) {
+            .iframe-container iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <!-- Banner -->
+        <div class="icon-link">
+            <a href="https://whatsa.me/5521980516816/?t=Quero%20saber%20mais!">
+                <img src="https://i.ibb.co/99bJvHPg/Banner-para-loja-online-frete-gr-tis-com-desconto-roxo-e-branco-1020-x-255-px-1120-x-255-px.gif" alt="Ícone">
+            </a>
+        </div>
+
+        <!-- Player de Vídeo -->
+        <div class="video-container active" id="video-container">
+            <video id="player" controls>
+                <source id="video-source" src="https://live-aw70q1c50-nicollas77pks-projects.vercel.app/api/proxy?url=http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8" type="application/x-mpegURL">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+        </div>
+
+        <!-- Player via Iframe -->
+        <div class="iframe-container" id="iframe-container">
+            <iframe id="iframe-player" src="" allowfullscreen></iframe>
+        </div>
+
+        <!-- Botões de Transmissão -->
+        <div class="options_iframe">
+            <a href="javascript:void(0)" onclick="changePlayerUrl('https://onplaytv.net/globorj/video.m3u8', 'application/x-mpegURL')">Transmissão 1</a>
+            <a href="javascript:void(0)" onclick="changePlayerUrl(' https://cdnlv.online/globorj-globorio/index.m3u8', 'application/x-mpegURL')">Transmissão 2</a>
+          <a href="javascript:void(0)" onclick="useIframe('https://playertv.net/e/?v=nossoFutebol')">transmissão 3</a>
+          <a href="javascript:void(0)" onclick="useIframe('https://embedcanaistv.com/globorj/')">transmissão 4</a>
+        </div>
+    </div>
+
+    <!-- Plyr.io script -->
+    <script src="https://cdn.plyr.io/3.6.12/plyr.polyfilled.js"></script>
+    <!-- HLS.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoContainer = document.getElementById('video-container');
+            const iframeContainer = document.getElementById('iframe-container');
+            const video = document.getElementById('player');
+            const videoSource = document.getElementById('video-source');
+            const iframePlayer = document.getElementById('iframe-player');
+            let hls;
+            let player;
+
+            // Função para alterar o player de vídeo
+            function changePlayerUrl(url, type) {
+                // Garantir que o iframe seja desativado
+                iframeContainer.classList.remove('active');
+                iframePlayer.src = '';
+
+                // Ativar o player de vídeo
+                videoContainer.classList.add('active');
+
+                // Pausar o vídeo atual e carregar a nova fonte
+                if (hls) {
+                    hls.destroy();
+                    hls = null;
+                }
+
+                video.pause();
+                videoSource.src = url;
+                videoSource.type = type;
+
+                if (type === 'application/x-mpegURL' && Hls.isSupported()) {
+                    hls = new Hls();
+                    hls.loadSource(url);
+                    hls.attachMedia(video);
+                } else {
+                    video.load();
+                }
+            }
+
+            // Função para alternar para o iframe
+            function useIframe(url) {
+                // Garantir que o player de vídeo seja desativado
+                videoContainer.classList.remove('active');
+                video.pause();
+
+                // Ativar o iframe e carregar a URL
+                iframeContainer.classList.add('active');
+                iframePlayer.src = url;
+            }
+
+            // URL inicial (HLS)
+            const initialUrl = 'https://live-aw70q1c50-nicollas77pks-projects.vercel.app/api/proxy?url=http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8';
+            changePlayerUrl(initialUrl, 'application/x-mpegURL');
+
+            player = new Plyr(video);
+
+            // Expor funções globais
+            window.changePlayerUrl = changePlayerUrl;
+            window.useIframe = useIframe;
+        });
+    </script>
+</body>     
+</html>
