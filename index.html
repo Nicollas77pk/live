@@ -1,3 +1,13 @@
+<div id="movie_video"></div><script type="text/javascript" src="https://21wiz.com/s.js?v=3f4852553c350543a7d5b9f893867fae" async></script>
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,6 +16,42 @@
     <title>Futebol ao vivo grátis</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
     <style>
+        .player-container {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            border: 5px solid green;
+            padding: 10px;
+            border-radius: 10px;
+            background: #000;
+            text-align: center;
+        }
+
+        .icon-link img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .video-container, .iframe-container {
+            display: none;
+            width: 100%;
+        }
+
+        .video-container.active, .iframe-container.active {
+            display: block;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
         .options_iframe {
             text-align: center;
             margin: 20px 0;
@@ -26,62 +72,41 @@
             background-color: darkgreen;
         }
 
-        .plyr--full-ui input[type=range] {
-            color: green;
-        }
-
-        .plyr__control--overlaid {
-            background-color: green;
-        }
-
-        .plyr__control--overlaid:hover {
-            background-color: darkgreen;
-        }
-
-        .image-post {
-            text-align: center;
-        }
-
-        .video-container, .iframe-container {
-            display: none;
-        }
-
-        .video-container.active, .iframe-container.active {
-            display: block;
-        }
-
-        .iframe-container iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
+        @media (max-width: 768px) {
+            .iframe-container iframe {
+                height: 300px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="image-post">
-        <h2></h2>
-        
-        <!-- Container do Player de Vídeo -->
+    <div class="player-container">
+        <!-- Banner -->
+        <div class="icon-link">
+            <a href="https://whatsa.me/5521980516816/?t=Quero%20saber%20mais!">
+                <img src="https://i.ibb.co/99bJvHPg/Banner-para-loja-online-frete-gr-tis-com-desconto-roxo-e-branco-1020-x-255-px-1120-x-255-px.gif" alt="Ícone">
+            </a>
+        </div>
+
+        <!-- Player de Vídeo -->
         <div class="video-container active" id="video-container">
             <video id="player" controls>
-                <source id="video-source" src="https://cdnlv.online/primevideo/tracks-v1a1/mono.m3u8" type="application/x-mpegURL">
+                <source id="video-source" src="http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8" type="application/x-mpegURL">
                 Seu navegador não suporta a tag de vídeo.
             </video>
         </div>
 
-        <!-- Container do Iframe -->
+        <!-- Player via Iframe -->
         <div class="iframe-container" id="iframe-container">
             <iframe id="iframe-player" src="" allowfullscreen></iframe>
         </div>
 
+        <!-- Botões de Transmissão -->
         <div class="options_iframe">
-            <a href="javascript:void(0)" onclick="changePlayerUrl('https://cdnlv.online/primevideo/tracks-v1a1/mono.m3u8', 'application/x-mpegURL')">transmissão 1</a>
-          <a href="javascript:void(0)" onclick="changePlayerUrl('https://cdnlv.online/primevideo2/tracks-v1a1/mono.m3u8', 'application/x-mpegURL')">transmissão 2</a>
-          <a href="javascript:void(0)" onclick="useIframe('https://sinalpublico.vercel.app/play/dtv.html?id=primevideo')">transmissão 3</a>
-          <a href="javascript:void(0)" onclick="changePlayerUrl('https://cdnlv.online/primevideo3/tracks-v1a1/mono.m3u8', 'application/x-mpegURL')">transmissão 4</a>
-            <a href="javascript:void(0)" onclick="useIframe('https://reidoscanais.cc/embed/?id=primevideo')">transmissão 5</a>
-          <a href="javascript:void(0)" onclick="useIframe('https://embedcanaistv.com/amazonprimevideo/')">transmissão 6</a>
-
+            <a href="javascript:void(0)" onclick="changePlayerUrl('http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8', 'application/x-mpegURL')">Transmissão 1</a>
+            <a href="javascript:void(0)" onclick="changePlayerUrl(' https://cdnlv.online/globorj-globorio/index.m3u8', 'application/x-mpegURL')">Transmissão 2</a>
+          <a href="javascript:void(0)" onclick="useIframe('https://playertv.net/e/?v=nossoFutebol')">transmissão 3</a>
+          <a href="javascript:void(0)" onclick="useIframe('https://embedcanaistv.com/globorj/')">transmissão 4</a>
         </div>
     </div>
 
@@ -139,7 +164,7 @@
             }
 
             // URL inicial (HLS)
-            const initialUrl = 'https://cdnlv.online/primevideo/tracks-v1a1/mono.m3u8';
+            const initialUrl = 'http://lexus.hubns.top:80/Leonardo77/983469871/2687675.m3u8';
             changePlayerUrl(initialUrl, 'application/x-mpegURL');
 
             player = new Plyr(video);
@@ -149,5 +174,6 @@
             window.useIframe = useIframe;
         });
     </script>
-</body>
+</body>     
 </html>
+ https://cdnlv.online/globorj-globorio/index.m3u8
