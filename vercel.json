@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "player1.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "player2.html",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/player1",
+            "dest": "/player1.html"
+        },
+        {
+            "src": "/player2",
+            "dest": "/player2.html"
+        }
+    ]
+}
