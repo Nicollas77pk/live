@@ -6,22 +6,22 @@
             "use": "@vercel/static"
         },
         {
-            "src": "player1.html",
+            "src": "sportv.html",
             "use": "@vercel/static"
         },
         {
-            "src": "player2.html",
+            "src": "sportv2.html",
             "use": "@vercel/static"
         }
     ],
     "routes": [
         {
-            "src": "/player1",
-            "dest": "/player1.html"
+            "src": "/sportv",
+            "dest": "/sportv.html"
         },
         {
-            "src": "/player2",
-            "dest": "/player2.html"
+            "src": "/sportv2",
+            "dest": "/sportv2.html"
         }
     ]
 }
