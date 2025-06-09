@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futebol ao vivo grátis</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #fff;
+    }
+
+    .layout-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 20px auto;
+      padding: 10px;
+      max-width: 1400px;
+    }
+
+    .banner-image {
+      flex: 1 1 200px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .banner-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+.player-container {
+  max-width: 750px;
+  border: 5px solid green;
+  padding: 5px; /* Reduzido o padding */
+  border-radius: 10px;
+  background: #000;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+    .icon-link img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .video-container, .iframe-container {
+      display: none;
+      width: 100%;
+    }
+
+    .video-container.active, .iframe-container.active {
+      display: block;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+    }
+
+
+   .iframe-container iframe {
+  width: 100%;
+  height: 360px; /* Reduzido de 500px para 360px */
+  border: none;
+}
+
+
+    .options_iframe {
+      text-align: center;
+      margin-top: 20px;
+      flex-basis: 100%;
+    }
+
+    .options_iframe a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .options_iframe a:hover {
+      background-color: darkgreen;
+    }
+
+    @media (max-width: 800ppx) {
+      .layout-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .player-container, .banner-image {
+        max-width: 100%;
+      }
+ .back-button a {
+      background: #9E9E9E;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+      .iframe-container iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+  <div class="back-button">
+    <a href="https://futebolaovivohoje.com.br/">Voltar</a>
+  </div>
+</header>
+  <div class="layout-container">
+
+
+
+      <!-- Player de Vídeo -->
+      <div class="video-container" id="video-container">
+        <video id="player" controls>
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </div>
+
+      <!-- Player via Iframe -->
+      <div class="iframe-container active" id="iframe-container">
+        <iframe id="iframe-player" src="https://embedtv-1.icu/paramountplus" allow="encrypted-media" allowfullscreen></iframe>
+      </div>
+
+      <!-- Botões de Transmissão -->
+      <div class="options_iframe">
+         <a href="javascript:void(0)" onclick="useIframe('https://reidoscanais.cc/embed/?id=paramountplus')">Transmissão 1</a>
+        <a href="javascript:void(0)" onclick="useIframe('https://reidoscanais.cc/embed/?id=paramountplus2')">Transmissão 2</a>
+        <a href="javascript:void(0)" onclick="useIframe('https://reidoscanais.cc/embed/?id=paramountplus3')">Transmissão 3</a>
+        <a href="javascript:void(0)" onclick="useIframe('https://embedtv-1.icu/paramountplus')">Transmissão 4</a>
+        <a href="javascript:void(0)" onclick="useIframe('https://embedtv-1.icu/paramountplus2')">Transmissão 5</a>
+      </div>
+    </div>
+
+
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const videoContainer = document.getElementById('video-container');
+      const iframeContainer = document.getElementById('iframe-container');
+      const video = document.getElementById('player');
+      const iframePlayer = document.getElementById('iframe-player');
+
+      function useIframe(url) {
+        videoContainer.classList.remove('active');
+        video.pause();
+        iframeContainer.classList.add('active');
+        iframePlayer.src = url;
+      }
+
+      window.useIframe = useIframe;
+    });
+  </script>
+</body>
+</html>
