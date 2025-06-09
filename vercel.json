@@ -12,6 +12,130 @@
         {
             "src": "sportv2.html",
             "use": "@vercel/static"
+        },
+        {
+            "src": "sportv3.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "espn.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "espn2.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "espn3.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "espn4.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere1.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere2.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere3.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere4.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere5.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere6.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "premiere7.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "ptv1.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "ptv2.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "br1.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "br2.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "br3.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "br4.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "br5.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "br6.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd1.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd2.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd3.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd4.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd5.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd6.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd7.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd8.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd9.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd10.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "hd11.html",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
@@ -22,6 +146,130 @@
         {
             "src": "/sportv2",
             "dest": "/sportv2.html"
+        },
+        {
+            "src": "/sportv3",
+            "dest": "/sportv3.html"
+        },
+        {
+            "src": "/espn",
+            "dest": "/espn.html"
+        },
+        {
+            "src": "/espn2",
+            "dest": "/espn2.html"
+        },
+        {
+            "src": "/espn3",
+            "dest": "/espn3.html"
+        },
+        {
+            "src": "/espn4",
+            "dest": "/espn4.html"
+        },
+        {
+            "src": "/premiere1",
+            "dest": "/premiere1.html"
+        },
+        {
+            "src": "/premiere2",
+            "dest": "/premiere2.html"
+        },
+        {
+            "src": "/premiere3",
+            "dest": "/premiere3.html"
+        },
+        {
+            "src": "/premiere4",
+            "dest": "/premiere4.html"
+        },
+        {
+            "src": "/premiere5",
+            "dest": "/premiere5.html"
+        },
+        {
+            "src": "/premiere6",
+            "dest": "/premiere6.html"
+        },
+        {
+            "src": "/premiere7",
+            "dest": "/premiere7.html"
+        },
+        {
+            "src": "/ptv1",
+            "dest": "/ptv1.html"
+        },
+        {
+            "src": "/ptv2",
+            "dest": "/ptv2.html"
+        },
+        {
+            "src": "/br1",
+            "dest": "/br1.html"
+        },
+        {
+            "src": "/br2",
+            "dest": "/br2.html"
+        },
+        {
+            "src": "/br3",
+            "dest": "/br3.html"
+        },
+        {
+            "src": "/br4",
+            "dest": "/br4.html"
+        },
+        {
+            "src": "/br5",
+            "dest": "/br5.html"
+        },
+        {
+            "src": "/br6",
+            "dest": "/br6.html"
+        },
+        {
+            "src": "/hd1",
+            "dest": "/hd1.html"
+        },
+        {
+            "src": "/hd2",
+            "dest": "/hd2.html"
+        },
+        {
+            "src": "/hd3",
+            "dest": "/hd3.html"
+        },
+        {
+            "src": "/hd4",
+            "dest": "/hd4.html"
+        },
+        {
+            "src": "/hd5",
+            "dest": "/hd5.html"
+        },
+        {
+            "src": "/hd6",
+            "dest": "/hd6.html"
+        },
+        {
+            "src": "/hd7",
+            "dest": "/hd7.html"
+        },
+        {
+            "src": "/hd8",
+            "dest": "/hd8.html"
+        },
+        {
+            "src": "/hd9",
+            "dest": "/hd9.html"
+        },
+        {
+            "src": "/hd10",
+            "dest": "/hd10.html"
+        },
+        {
+            "src": "/hd11",
+            "dest": "/hd11.html"
         }
     ]
 }
