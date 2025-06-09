@@ -6,6 +6,55 @@
             "use": "@vercel/static"
         },
         {
+            "src": "bob.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "band.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "bandsports.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "eleven.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "win.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "vtv.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "espnargentina.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "tyc.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "redetv.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "tvcultura.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "sbt.html",
+            "use": "@vercel/static"
+        },
+        
+        {
+            "src": "evento.html",
+            "use": "@vercel/static"
+        },
+        {
             "src": "sportv.html",
             "use": "@vercel/static"
         },
@@ -67,6 +116,22 @@
         },
         {
             "src": "ptv2.html",
+            "use": "@vercel/static"
+        },
+{
+            "src": "ptv3.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "ptv4.html",
+            "use": "@vercel/static"
+        },
+{
+            "src": "ptv5.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "ptv6.html",
             "use": "@vercel/static"
         },
         {
@@ -140,6 +205,54 @@
     ],
     "routes": [
         {
+            "src": "/bob",
+            "dest": "/bob.html"
+        },
+        {
+            "src": "/band",
+            "dest": "/band.html"
+        },
+        {
+            "src": "/bandsports",
+            "dest": "/bandsports.html"
+        },
+        {
+            "src": "/eleven",
+            "dest": "/eleven.html"
+        },
+        {
+            "src": "/win",
+            "dest": "/win.html"
+        },
+        {
+            "src": "/vtv",
+            "dest": "/vtv.html"
+        },
+        {
+            "src": "/espnargentina",
+            "dest": "/espnargentina.html"
+        },
+        {
+            "src": "/tyc",
+            "dest": "/tyc.html"
+        },
+        {
+            "src": "/redetv",
+            "dest": "/redetv.html"
+        },
+        {
+            "src": "/tvcultura",
+            "dest": "/tvcultura.html"
+        },
+        {
+            "src": "/sbt",
+            "dest": "/sbt.html"
+        },
+        {
+            "src": "/evento",
+            "dest": "/evento.html"
+        },
+        {
             "src": "/sportv",
             "dest": "/sportv.html"
         },
@@ -202,6 +315,22 @@
         {
             "src": "/ptv2",
             "dest": "/ptv2.html"
+        },
+{
+            "src": "/ptv3",
+            "dest": "/ptv3.html"
+        },
+        {
+            "src": "/ptv4",
+            "dest": "/ptv4.html"
+        },
+{
+            "src": "/ptv5",
+            "dest": "/ptv5.html"
+        },
+        {
+            "src": "/ptv6",
+            "dest": "/ptv6.html"
         },
         {
             "src": "/br1",
